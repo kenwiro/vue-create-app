@@ -13,6 +13,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, '..', 'build'),
+    open: true,
     hot: true,
     port: 9000,
     clientLogLevel: 'error'
@@ -29,6 +30,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'public/index.html',
+      title: 'Vue Create App'
     }),
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: true,
